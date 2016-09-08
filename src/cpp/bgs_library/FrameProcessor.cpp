@@ -255,7 +255,7 @@ namespace bgslibrary
 
     if(enableMultiLayerBGS)
     {
-      multiLayerBGS->setStatus(MultiLayerBGS::Status::MLBGS_LEARN);
+      multiLayerBGS->setStatus(MultiLayerBGS::MLBGS_LEARN);
       //multiLayerBGS->setStatus(MultiLayerBGS::Status::MLBGS_DETECT);
       process("MultiLayerBGS", multiLayerBGS, img_prep, img_mlbgs);
     }

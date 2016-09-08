@@ -9,7 +9,6 @@ IF(APPLE)
 
     ADD_DEFINITIONS(
     # C++ flags
-        -std=c++11 
         -stdlib=libc++
 #        -fno-strict-aliasing
     )
@@ -17,17 +16,16 @@ ENDIF (APPLE)
 
 ADD_DEFINITIONS(
 # optimization
+    -std=c++11
     -O3 
     -fPIC
 # debug 
 #    -g
 # warnings
     -Wall 
-    -Wno-null-conversion 
     -Wno-unused-label 
     -Wno-overloaded-virtual 
     -Wno-deprecated-declarations 
-    -Wno-tautological-constant-out-of-range-compare
 )
 
 

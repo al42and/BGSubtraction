@@ -33,7 +33,7 @@ typedef int BOOL;
   #define TRUE 1
 #endif
 
-#include <malloc/malloc.h>
+#include <stdlib.h>
 #include "math.h"
 
 #include <vector>
