@@ -127,19 +127,19 @@ CMultiLayerBGS::~CMultiLayerBGS() {
   int img_length = m_cvImgSize.height * m_cvImgSize.width;
   PixelLBPStruct* PLBP = m_pPixelLBPs;
   for (int yx = 0; yx < img_length; yx++) {
-    delete (*PLBP).cur_intensity;
-    delete (*PLBP).cur_pattern;
-    delete (*PLBP).lbp_idxes;
+    delete[] (*PLBP).cur_intensity;
+    delete[] (*PLBP).cur_pattern;
+    delete[] (*PLBP).lbp_idxes;
     for (int a = 0; a < m_nMaxLBPModeNum; a++) {
-      delete (*PLBP).LBPs[a].bg_intensity;
-      delete (*PLBP).LBPs[a].max_intensity;
-      delete (*PLBP).LBPs[a].min_intensity;
-      delete (*PLBP).LBPs[a].bg_pattern;
+      delete[] (*PLBP).LBPs[a].bg_intensity;
+      delete[] (*PLBP).LBPs[a].max_intensity;
+      delete[] (*PLBP).LBPs[a].min_intensity;
+      delete[] (*PLBP).LBPs[a].bg_pattern;
     }
-    delete (*PLBP).LBPs;
+    delete[] (*PLBP).LBPs;
     PLBP++;
   }
-  delete m_pPixelLBPs;
+  delete[] m_pPixelLBPs;
 
   /* release memories */
   if (m_pFgImg != NULL)
